@@ -1,0 +1,753 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fleet_traffic_fines
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-15 20:19+0000\n"
+"PO-Revision-Date: 2026-11-15 20:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/fleet_traffic_fine.py:0
+msgid "%(count)s changed case(s) received from vyto."
+msgstr "%(count)s geänderte Fälle von vyto empfangen."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__unfall
+msgid "Accident / damage"
+msgstr "Unfall / Schaden"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/res_config_settings.py:0
+msgid "Account: %(account)s. Permissions: %(scopes)s."
+msgstr "Konto: %(account)s. Rechte: %(scopes)s."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_needaction
+msgid "Action Needed"
+msgstr "Aktion notwendig"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_ids
+msgid "Activities"
+msgstr "Aktivitäten"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Ausnahmedekoration für Aktivität"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_state
+msgid "Activity State"
+msgstr "Status der Aktivität"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Symbol des Aktivitätstyps"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.actions.act_window,help:fleet_traffic_fines.action_fleet_traffic_fine
+msgid ""
+"Add your vyto API key in Fleet &gt; Configuration &gt; Settings. Requires a "
+"vyto account (external service)."
+msgstr "Tragen Sie Ihren vyto-API-Schlüssel unter Flotte &gt; Konfiguration &gt; Einstellungen ein. Erfordert ein vyto-Konto (externer Dienst)."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__amount
+msgid "Amount"
+msgstr "Betrag"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__status__archiviert
+msgid "Archived"
+msgstr "Archiviert"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_attachment_count
+msgid "Attachment Count"
+msgstr "Anzahl Anhänge"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__authority
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid "Authority"
+msgstr "Behörde"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__reference
+msgid "Authority reference"
+msgstr "Aktenzeichen der Behörde"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_upload_view_form
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.actions.act_window,help:fleet_traffic_fines.action_fleet_traffic_fine
+msgid "Cases from your vyto account appear here after the hourly sync."
+msgstr "Fälle aus Ihrem vyto-Konto erscheinen hier nach dem stündlichen Abgleich."
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Closed"
+msgstr "Abgeschlossen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__company_id
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model,name:fleet_traffic_fines.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/res_config_settings.py:0
+msgid "Connected to vyto"
+msgstr "Mit vyto verbunden"
+
+#. module: fleet_traffic_fines
+#: model:ir.model,name:fleet_traffic_fines.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__mahnbescheid
+msgid "Court payment order"
+msgstr "Mahnbescheid"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_res_config_settings__vyto_api_key
+msgid "Create the key in vyto under Settings > Integrations > API keys."
+msgstr "Legen Sie den Schlüssel in vyto unter Einstellungen > Integrationen > API-Schlüssel an."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__create_uid
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__create_date
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__currency_id
+msgid "Currency"
+msgstr "Währung"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__deadline
+msgid "Deadline"
+msgstr "Frist"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__deadline_activity_id
+msgid "Deadline Activity"
+msgstr "Fristen-Aktivität"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Deadline within 7 days"
+msgstr "Frist in 7 Tagen"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid "Deadlines"
+msgstr "Fristen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__inkasso
+msgid "Debt collection"
+msgstr "Inkasso"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__display_name
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__status__abgeschlossen
+msgid "Done"
+msgstr "Abgeschlossen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__driver_id
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Driver"
+msgstr "Fahrer"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__status__zugeordnet
+msgid "Driver assigned"
+msgstr "Fahrer zugeordnet"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__driver_id
+msgid ""
+"Driver of the vehicle on the day of the offense, taken from the vehicle's "
+"driver history."
+msgstr "Fahrer des Fahrzeugs am Tattag, aus der Fahrerhistorie des Fahrzeugs."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.constraint,message:fleet_traffic_fines.constraint_fleet_traffic_fine_vyto_id_company_uniq
+msgid "Each vyto case exists only once per company."
+msgstr "Jeder vyto-Fall existiert je Unternehmen nur einmal."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__deadline
+msgid "Earliest deadline of an open case"
+msgstr "Früheste Frist eines offenen Falls"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__vollstreckungsbescheid
+msgid "Enforcement order"
+msgstr "Vollstreckungsbescheid"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__filename
+msgid "Filename"
+msgstr "Dateiname"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__bußgeldbescheid
+msgid "Fine notice"
+msgstr "Bußgeldbescheid"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__manager_id
+msgid "Fleet Manager"
+msgstr "Fuhrparkverantwortlicher"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_follower_ids
+msgid "Followers"
+msgstr "Follower"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Follower (Partner)"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font-Awesome-Symbol, z. B. fa-tasks"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__pfändung
+msgid "Garnishment"
+msgstr "Pfändung"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Group By"
+msgstr "Gruppieren nach"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/fleet_traffic_fine.py:0
+msgid "Handle this case in vyto before the deadline."
+msgstr "Bearbeiten Sie diesen Fall vor Ablauf der Frist in vyto."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__has_message
+msgid "Has Message"
+msgstr "Hat Nachrichten"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__id
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_exception_icon
+msgid "Icon"
+msgstr "Symbol"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Symbol für eine Ausnahmeaktivität."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Falls markiert, erfordern neue Nachrichten Ihre Aufmerksamkeit."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Falls markiert, hatten einige Nachrichten einen Zustellfehler."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_is_follower
+msgid "Is Follower"
+msgstr "Ist Follower"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__kind
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Kind"
+msgstr "Art"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__write_uid
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__write_date
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__vyto_updated_at
+msgid "Last change in vyto"
+msgstr "Letzte Änderung in vyto"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__letter_date
+msgid "Letter Date"
+msgstr "Briefdatum"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__license_plate
+msgid "License Plate"
+msgstr "Kennzeichen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__license_plate_normalized
+msgid "License Plate Normalized"
+msgstr "Kennzeichen (normalisiert)"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_has_error
+msgid "Message Delivery error"
+msgstr "Nachricht mit Zustellfehler"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_ids
+msgid "Messages"
+msgstr "Nachrichten"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Meine Aktivitätsfrist"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__name
+msgid "Name"
+msgstr "Name"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__status__neu
+msgid "New"
+msgstr "Neu"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Frist der nächsten Aktivität"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_summary
+msgid "Next Activity Summary"
+msgstr "Zusammenfassung der nächsten Aktivität"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_type_id
+msgid "Next Activity Type"
+msgstr "Typ der nächsten Aktivität"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.actions.act_window,help:fleet_traffic_fines.action_fleet_traffic_fine
+msgid "No traffic fines yet"
+msgstr "Noch keine Strafzettel"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/vyto_api.py:0
+msgid ""
+"No vyto API key configured. Add it in Fleet > Configuration > Settings."
+msgstr "Kein vyto-API-Schlüssel eingerichtet. Tragen Sie ihn unter Flotte > Konfiguration > Einstellungen ein."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__file
+msgid "Notice (PDF)"
+msgstr "Bescheid (PDF)"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Anzahl der Aktionen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__message_has_error_counter
+msgid "Number of errors"
+msgstr "Anzahl der Fehler"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Anzahl der Nachrichten, die eine Aktion erfordern"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Anzahl der Nachrichten mit Zustellfehler"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__deadline_objection
+msgid "Objection deadline"
+msgstr "Einspruchsfrist"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__offense
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid "Offense"
+msgstr "Vorwurf"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__offense_date
+msgid "Offense Date"
+msgstr "Tatzeit"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__offense_location
+msgid "Offense Location"
+msgstr "Tatort"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__offense_timezone
+msgid "Offense Timezone"
+msgstr "Zeitzone des Tatorts"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_res_config_settings__vyto_api_url
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid "Only change this for a vyto test environment."
+msgstr "Nur für eine vyto-Testumgebung ändern."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__is_open
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Open"
+msgstr "Offen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__vyto_url
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid "Open in vyto"
+msgstr "In vyto öffnen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_vehicle__traffic_fine_open_count
+msgid "Open traffic fines"
+msgstr "Offene Strafzettel"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__anderes
+msgid "Other"
+msgstr "Anderes"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__deadline_payment
+msgid "Payment deadline"
+msgstr "Zahlungsfrist"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__zahlungsaufforderung
+msgid "Payment request"
+msgstr "Zahlungsaufforderung"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/wizard/fleet_traffic_fine_upload.py:0
+msgid "Please choose a PDF file."
+msgstr "Bitte eine PDF-Datei wählen."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__status__bereit
+msgid "Ready to send"
+msgstr "Bereit zum Senden"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__mahnung
+msgid "Reminder"
+msgstr "Mahnung"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid ""
+"Requires a vyto account (external service). Create an API key in vyto under "
+"Settings > Integrations > API keys."
+msgstr "Erfordert ein vyto-Konto (externer Dienst). Legen Sie in vyto unter Einstellungen > Integrationen > API-Schlüssel einen Schlüssel an."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__deadline_response
+msgid "Response deadline"
+msgstr "Antwortfrist"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwortlicher Benutzer"
+
+#. module: fleet_traffic_fines
+#: model:ir.model,name:fleet_traffic_fines.model_fleet_traffic_fine_upload
+msgid "Send a traffic notice to vyto"
+msgstr "Bescheid an vyto senden"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_upload_view_form
+msgid "Send to vyto"
+msgstr "An vyto senden"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/wizard/fleet_traffic_fine_upload.py:0
+msgid ""
+"Sent to vyto. The case appears here with the next sync once vyto has read "
+"the notice."
+msgstr "An vyto gesendet. Der Fall erscheint hier mit dem nächsten Abgleich, sobald vyto den Bescheid ausgelesen hat."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__status
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Status"
+msgstr "Status"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "Status basierend auf Aktivitäten\nÜberfällig: Fälligkeitsdatum ist bereits überschritten\nHeute: Aktivitätsdatum ist heute\nGeplant: Zukünftige Aktivitäten."
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_list
+msgid "Sync now"
+msgstr "Jetzt abgleichen"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid "Test connection"
+msgstr "Verbindung testen"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/wizard/fleet_traffic_fine_upload.py:0
+msgid "The file is larger than 5 MB."
+msgstr "Die Datei ist größer als 5 MB."
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_upload_view_form
+msgid ""
+"The notice is sent to vyto, which reads it and creates the case. It shows up"
+" here with the next sync."
+msgstr "Der Bescheid geht an vyto; vyto liest ihn aus und legt den Fall an. Er erscheint hier mit dem nächsten Abgleich."
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/vyto_api.py:0
+msgid "The vyto API URL must start with https://."
+msgstr "Die vyto-API-Adresse muss mit https:// beginnen."
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid ""
+"This case is managed in vyto and synchronized every hour. Changes are made "
+"in vyto."
+msgstr "Dieser Fall wird in vyto bearbeitet und stündlich abgeglichen. Änderungen erfolgen in vyto."
+
+#. module: fleet_traffic_fines
+#: model:ir.model,name:fleet_traffic_fines.model_fleet_traffic_fine
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid "Traffic Fine"
+msgstr "Strafzettel"
+
+#. module: fleet_traffic_fines
+#: model:ir.actions.act_window,name:fleet_traffic_fines.action_fleet_traffic_fine
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_vehicle__traffic_fine_ids
+#: model:ir.ui.menu,name:fleet_traffic_fines.menu_fleet_traffic_fines
+#: model:ir.ui.menu,name:fleet_traffic_fines.menu_fleet_traffic_fines_root
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_list
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Traffic Fines"
+msgstr "Strafzettel"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid "Traffic Fines (vyto)"
+msgstr "Strafzettel (vyto)"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/res_partner.py:0
+msgid "Traffic Fines of %(driver)s"
+msgstr "Strafzettel von %(driver)s"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/fleet_vehicle.py:0
+msgid "Traffic Fines of %(vehicle)s"
+msgstr "Strafzettel von %(vehicle)s"
+
+#. module: fleet_traffic_fines
+#: model:ir.actions.server,name:fleet_traffic_fines.ir_cron_sync_vyto_ir_actions_server
+msgid "Traffic Fines: sync from vyto"
+msgstr "Strafzettel: Abgleich mit vyto"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/fleet_traffic_fine.py:0
+msgid "Traffic fine"
+msgstr "Strafzettel"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/fleet_traffic_fine.py:0
+msgid "Traffic fine deadline: %(ref)s"
+msgstr "Frist für Strafzettel: %(ref)s"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_res_partner__traffic_fine_count
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_res_users__traffic_fine_count
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_partner_view_form_traffic_fines
+msgid "Traffic fines"
+msgstr "Strafzettel"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_vehicle_view_form_traffic_fines
+msgid "Traffic fines open"
+msgstr "Strafzettel offen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__verkehrsordnungswidrigkeit
+msgid "Traffic offense"
+msgstr "Verkehrsordnungswidrigkeit"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Typ der Ausnahmeaktivität im Datensatz."
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/fleet_vehicle.py:0
+#: model:ir.actions.act_window,name:fleet_traffic_fines.action_fleet_traffic_fine_upload
+#: model:ir.ui.menu,name:fleet_traffic_fines.menu_fleet_traffic_fine_upload
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_upload_view_form
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_list
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_vehicle_view_form_traffic_fines
+msgid "Upload notice"
+msgstr "Bescheid hochladen"
+
+#. module: fleet_traffic_fines
+#: model:ir.model,name:fleet_traffic_fines.model_fleet_vehicle
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__vehicle_id
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine_upload__vehicle_id
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Vehicle"
+msgstr "Fahrzeug"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_form
+msgid "Vehicle and driver"
+msgstr "Fahrzeug und Fahrer"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__verwarnung
+msgid "Warning notice"
+msgstr "Verwarnung"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.fleet_traffic_fine_view_search
+msgid "Without vehicle"
+msgstr "Ohne Fahrzeug"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields.selection,name:fleet_traffic_fines.selection__fleet_traffic_fine__kind__zeugenanhörung
+msgid "Witness hearing"
+msgstr "Zeugenanhörung"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_res_config_settings__vyto_api_url
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid "vyto API URL"
+msgstr "vyto-API-Adresse"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_res_config_settings__vyto_api_key
+msgid "vyto API key"
+msgstr "vyto-API-Schlüssel"
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,field_description:fleet_traffic_fines.field_fleet_traffic_fine__vyto_id
+msgid "vyto ID"
+msgstr "vyto-ID"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/wizard/fleet_traffic_fine_upload.py:0
+msgid "vyto already has this notice."
+msgstr "vyto hat diesen Bescheid bereits."
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/vyto_api.py:0
+msgid "vyto answered with an error (HTTP %(status)s): %(message)s"
+msgstr "vyto hat mit einem Fehler geantwortet (HTTP %(status)s): %(message)s"
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid "vyto connection"
+msgstr "Verbindung zu vyto"
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/vyto_api.py:0
+msgid "vyto is not reachable right now. Please try again later."
+msgstr "vyto ist gerade nicht erreichbar. Bitte später erneut versuchen."
+
+#. module: fleet_traffic_fines
+#. odoo-python
+#: code:addons/fleet_traffic_fines/models/vyto_api.py:0
+msgid ""
+"vyto rejected the API key. Check it in Fleet > Configuration > Settings."
+msgstr "vyto hat den API-Schlüssel abgelehnt. Bitte unter Flotte > Konfiguration > Einstellungen prüfen."
+
+#. module: fleet_traffic_fines
+#: model:ir.model.fields,help:fleet_traffic_fines.field_fleet_traffic_fine_upload__vehicle_id
+msgid "vyto uses its license plate if the notice itself shows none."
+msgstr "vyto nutzt dessen Kennzeichen, falls der Bescheid selbst keins zeigt."
+
+#. module: fleet_traffic_fines
+#: model_terms:ir.ui.view,arch_db:fleet_traffic_fines.res_config_settings_view_form_traffic_fines
+msgid "vyto_…"
+msgstr "vyto_…"

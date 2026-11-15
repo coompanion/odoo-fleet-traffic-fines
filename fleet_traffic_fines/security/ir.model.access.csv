@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fleet_traffic_fine_user,fleet.traffic.fine user,model_fleet_traffic_fine,fleet.fleet_group_user,1,0,0,0
+access_fleet_traffic_fine_manager,fleet.traffic.fine manager,model_fleet_traffic_fine,fleet.fleet_group_manager,1,0,0,0
+access_fleet_traffic_fine_upload_manager,fleet.traffic.fine.upload manager,model_fleet_traffic_fine_upload,fleet.fleet_group_manager,1,1,1,1

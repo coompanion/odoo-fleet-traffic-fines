@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="ir_cron_sync_vyto" model="ir.cron">
+        <field name="name">Traffic Fines: sync from vyto</field>
+        <field name="model_id" ref="model_fleet_traffic_fine"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_sync_vyto()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

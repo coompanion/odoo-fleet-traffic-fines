@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form_traffic_fines" model="ir.ui.view">
+        <field name="name">res.partner.form.traffic.fines</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_traffic_fines" type="object" class="oe_stat_button" icon="fa-file-text-o"
+                        groups="fleet.fleet_group_user" invisible="not traffic_fine_count">
+                    <field name="traffic_fine_count" widget="statinfo" string="Traffic fines"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

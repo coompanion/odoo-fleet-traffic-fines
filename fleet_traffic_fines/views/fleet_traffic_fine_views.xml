@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fleet_traffic_fine_view_list" model="ir.ui.view">
+        <field name="name">fleet.traffic.fine.list</field>
+        <field name="model">fleet.traffic.fine</field>
+        <field name="arch" type="xml">
+            <list string="Traffic Fines" create="false" edit="false" delete="false"
+                  decoration-muted="not is_open" decoration-warning="is_open and deadline and deadline &lt;= (context_today() + relativedelta(days=7)).strftime('%Y-%m-%d')">
+                <header>
+                    <button name="action_sync_now" type="object" string="Sync now" display="always" groups="fleet.fleet_group_manager"/>
+                    <button name="%(fleet_traffic_fines.action_fleet_traffic_fine_upload)d" type="action" string="Upload notice" display="always" groups="fleet.fleet_group_manager"/>
+                </header>
+                <field name="is_open" column_invisible="1"/>
+                <field name="offense_date"/>
+                <field name="license_plate"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="kind"/>
+                <field name="authority" optional="show"/>
+                <field name="reference" optional="hide"/>
+                <field name="amount" optional="show"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="deadline" widget="remaining_days" invisible="not is_open"/>
+                <field name="status" widget="badge"/>
+                <field name="activity_ids" widget="list_activity" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="fleet_traffic_fine_view_form" model="ir.ui.view">
+        <field name="name">fleet.traffic.fine.form</field>
+        <field name="model">fleet.traffic.fine</field>
+        <field name="arch" type="xml">
+            <form string="Traffic Fine" create="false" edit="false" delete="false">
+                <header>
+                    <button name="action_open_in_vyto" type="object" string="Open in vyto" class="btn-primary" invisible="not vyto_url"/>
+                    <field name="status" widget="statusbar" statusbar_visible="Neu,Zugeordnet,Bereit,Abgeschlossen"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Vehicle and driver">
+                            <field name="license_plate"/>
+                            <field name="vehicle_id"/>
+                            <field name="driver_id"/>
+                            <field name="manager_id"/>
+                        </group>
+                        <group string="Offense">
+                            <field name="kind"/>
+                            <field name="offense_date"/>
+                            <field name="offense"/>
+                            <field name="offense_location"/>
+                            <field name="amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group string="Authority">
+                            <field name="authority"/>
+                            <field name="reference"/>
+                            <field name="letter_date"/>
+                        </group>
+                        <group string="Deadlines">
+                            <field name="is_open" invisible="1"/>
+                            <field name="deadline" widget="remaining_days" invisible="not is_open"/>
+                            <field name="deadline_response"/>
+                            <field name="deadline_objection"/>
+                            <field name="deadline_payment"/>
+                        </group>
+                    </group>
+                    <p class="text-muted">
+                        This case is managed in vyto and synchronized every hour. Changes are made in vyto.
+                    </p>
+                    <group>
+                        <field name="vyto_updated_at"/>
+                        <field name="vyto_url" invisible="1"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="fleet_traffic_fine_view_search" model="ir.ui.view">
+        <field name="name">fleet.traffic.fine.search</field>
+        <field name="model">fleet.traffic.fine</field>
+        <field name="arch" type="xml">
+            <search string="Traffic Fines">
+                <field name="license_plate"/>
+                <field name="vehicle_id"/>
+                <field name="driver_id"/>
+                <field name="reference"/>
+                <field name="authority"/>
+                <filter string="Open" name="filter_open" domain="[('is_open', '=', True)]"/>
+                <filter string="Deadline within 7 days" name="filter_deadline_soon"
+                        domain="[('is_open', '=', True), ('deadline', '!=', False), ('deadline', '&lt;=', (context_today() + relativedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter string="Without vehicle" name="filter_no_vehicle" domain="[('vehicle_id', '=', False)]"/>
+                <separator/>
+                <filter string="Closed" name="filter_closed" domain="[('is_open', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Status" name="group_status" context="{'group_by': 'status'}"/>
+                    <filter string="Vehicle" name="group_vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter string="Driver" name="group_driver" context="{'group_by': 'driver_id'}"/>
+                    <filter string="Kind" name="group_kind" context="{'group_by': 'kind'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_fleet_traffic_fine" model="ir.actions.act_window">
+        <field name="name">Traffic Fines</field>
+        <field name="res_model">fleet.traffic.fine</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="fleet_traffic_fine_view_search"/>
+        <field name="context">{'search_default_filter_open': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No traffic fines yet</p>
+            <p>Cases from your vyto account appear here after the hourly sync.</p>
+            <p>Add your vyto API key in Fleet &gt; Configuration &gt; Settings. Requires a vyto account (external service).</p>
+        </field>
+    </record>
+</odoo>

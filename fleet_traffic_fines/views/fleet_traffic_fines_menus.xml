@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_fleet_traffic_fines_root" name="Traffic Fines" parent="fleet.menu_root" sequence="3"
+              groups="fleet.fleet_group_user"/>
+    <menuitem id="menu_fleet_traffic_fines" name="Traffic Fines" parent="menu_fleet_traffic_fines_root"
+              action="action_fleet_traffic_fine" sequence="1"/>
+    <menuitem id="menu_fleet_traffic_fine_upload" name="Upload notice" parent="menu_fleet_traffic_fines_root"
+              action="action_fleet_traffic_fine_upload" sequence="2" groups="fleet.fleet_group_manager"/>
+</odoo>

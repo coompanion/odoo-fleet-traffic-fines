@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fleet_vehicle_view_form_traffic_fines" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.traffic.fines</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_upload_traffic_notice" type="object" string="Upload notice" groups="fleet.fleet_group_manager"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_traffic_fines" type="object" class="oe_stat_button" icon="fa-file-text-o">
+                    <field name="traffic_fine_open_count" widget="statinfo" string="Traffic fines open"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>
