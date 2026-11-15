@@ -9,6 +9,7 @@ import re
 
 import requests
 
+from odoo import _
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
@@ -36,9 +37,9 @@ class VytoApi:
         self.api_key = (icp.get_param(PARAM_API_KEY) or "").strip()
         self.base_url = (icp.get_param(PARAM_API_URL) or DEFAULT_API_URL).strip().rstrip("/")
         if not self.api_key:
-            raise VytoApiError(self.env._("No vyto API key configured. Add it in Fleet > Configuration > Settings."))
+            raise VytoApiError(_("No vyto API key configured. Add it in Fleet > Configuration > Settings."))
         if not self.base_url.startswith("https://"):
-            raise VytoApiError(self.env._("The vyto API URL must start with https://."))
+            raise VytoApiError(_("The vyto API URL must start with https://."))
 
     def _request(self, method, path, **kwargs):
         url = f"{self.base_url}{path}"
@@ -47,7 +48,7 @@ class VytoApi:
             response = requests.request(method, url, headers=headers, timeout=TIMEOUT, **kwargs)
         except requests.RequestException as e:
             _logger.warning("vyto API %s %s failed: %s", method, path, e)
-            raise VytoApiError(self.env._("vyto is not reachable right now. Please try again later.")) from e
+            raise VytoApiError(_("vyto is not reachable right now. Please try again later.")) from e
         try:
             payload = response.json()
         except ValueError:
@@ -56,8 +57,8 @@ class VytoApi:
             message = (payload.get("error") or {}).get("message") or response.reason
             _logger.warning("vyto API %s %s: HTTP %s %s", method, path, response.status_code, message)
             if response.status_code == 401:
-                raise VytoApiError(self.env._("vyto rejected the API key. Check it in Fleet > Configuration > Settings."))
-            raise VytoApiError(self.env._("vyto answered with an error (HTTP %(status)s): %(message)s", status=response.status_code, message=message))
+                raise VytoApiError(_("vyto rejected the API key. Check it in Fleet > Configuration > Settings."))
+            raise VytoApiError(_("vyto answered with an error (HTTP %(status)s): %(message)s", status=response.status_code, message=message))
         return payload
 
     def ping(self):
