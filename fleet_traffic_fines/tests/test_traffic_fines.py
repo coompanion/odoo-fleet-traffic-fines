@@ -46,7 +46,7 @@ class TestTrafficFines(TransactionCase):
         cls.manager_user = cls.env["res.users"].create({
             "name": "Fleet Manager",
             "login": "fleet_manager_tf",
-            "groups_id": [(6, 0, [cls.env.ref("fleet.fleet_group_manager").id])],
+            "group_ids": [(6, 0, [cls.env.ref("fleet.fleet_group_manager").id])],
         })
         brand = cls.env["fleet.vehicle.model.brand"].create({"name": "Test Brand"})
         model = cls.env["fleet.vehicle.model"].create({"name": "Test Model", "brand_id": brand.id})
@@ -167,7 +167,7 @@ class TestTrafficFines(TransactionCase):
         self._sync([{"data": [vyto_case("11111111-0000-0000-0000-000000000010")], "has_more": False}])
         user = self.env["res.users"].create({
             "name": "Fleet User", "login": "fleet_user_tf",
-            "groups_id": [(6, 0, [self.env.ref("fleet.fleet_group_user").id])]})
+            "group_ids": [(6, 0, [self.env.ref("fleet.fleet_group_user").id])]})
         fine = self.Fine.with_user(user).search([("vyto_id", "=", "11111111-0000-0000-0000-000000000010")])
         self.assertTrue(fine.name)
         with self.assertRaises(Exception):

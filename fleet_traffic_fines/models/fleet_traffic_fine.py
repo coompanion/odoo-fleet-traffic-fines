@@ -85,9 +85,10 @@ class FleetTrafficFine(models.Model):
     vyto_updated_at = fields.Datetime(string="Last change in vyto", readonly=True)
     deadline_activity_id = fields.Many2one("mail.activity", readonly=True, copy=False, index="btree_not_null")
 
-    _sql_constraints = [
-        ("vyto_id_company_uniq", "unique(vyto_id, company_id)", "Each vyto case exists only once per company."),
-    ]
+    _vyto_id_company_uniq = models.Constraint(
+        "unique(vyto_id, company_id)",
+        "Each vyto case exists only once per company.",
+    )
 
     @api.depends("reference", "license_plate", "kind")
     def _compute_name(self):
