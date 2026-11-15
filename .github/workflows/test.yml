@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: odoo:19.0
+      options: --user root
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+          POSTGRES_DB: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install module and run tests
+        run: |
+          odoo --db_host=postgres --db_user=odoo --db_password=odoo -d test \
+            --addons-path=/usr/lib/python3/dist-packages/odoo/addons,"$GITHUB_WORKSPACE" \
+            -i fleet_traffic_fines --test-enable --test-tags /fleet_traffic_fines \
+            --stop-after-init --log-level=test 2>&1 | tee odoo.log
+          grep -E "odoo.tests.result" odoo.log
+          grep -qE "0 failed, 0 error\(s\) of [1-9][0-9]* tests" odoo.log

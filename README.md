@@ -1,5 +1,7 @@
 # Fleet Traffic Fines (Odoo)
 
+[![Tests](https://github.com/coompanion/odoo-fleet-traffic-fines/actions/workflows/test.yml/badge.svg?branch=19.0)](https://github.com/coompanion/odoo-fleet-traffic-fines/actions/workflows/test.yml)
+
 Odoo module that shows the traffic fine cases of a [vyto](https://vyto.ai) account on fleet vehicles and drivers,
 creates activities for upcoming deadlines and sends new notices to vyto.
 
