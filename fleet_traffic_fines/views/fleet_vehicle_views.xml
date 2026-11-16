@@ -9,7 +9,7 @@
                 <button name="action_upload_traffic_notice" type="object" string="Upload notice" groups="fleet.fleet_group_manager"/>
             </xpath>
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button name="action_view_traffic_fines" type="object" class="oe_stat_button" icon="fa-file-text-o">
+                <button name="action_view_traffic_fines" type="object" class="oe_stat_button" icon="description">
                     <field name="traffic_fine_open_count" widget="statinfo" string="Traffic fines open"/>
                 </button>
             </xpath>

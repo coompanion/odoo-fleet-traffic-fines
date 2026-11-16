@@ -13,7 +13,7 @@
                             <field name="vyto_api_key" password="True" placeholder="vyto_…"/>
                         </div>
                         <div class="mt8">
-                            <button name="action_vyto_test_connection" type="object" string="Test connection" class="btn-link" icon="oi-arrow-right"/>
+                            <button name="action_vyto_test_connection" type="object" string="Test connection" class="btn-link" icon="east"/>
                         </div>
                     </setting>
                     <setting string="vyto API URL" help="Only change this for a vyto test environment." groups="base.group_no_one">
