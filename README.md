@@ -1,6 +1,6 @@
 # Fleet Traffic Fines (Odoo)
 
-[![Tests](https://github.com/coompanion/odoo-fleet-traffic-fines/actions/workflows/test.yml/badge.svg?branch=19.0)](https://github.com/coompanion/odoo-fleet-traffic-fines/actions/workflows/test.yml)
+[![Tests](https://github.com/coompanion/odoo-fleet-traffic-fines/actions/workflows/test.yml/badge.svg?branch=20.0)](https://github.com/coompanion/odoo-fleet-traffic-fines/actions/workflows/test.yml)
 
 Odoo module that shows the traffic fine cases of a [vyto](https://vyto.ai) account on fleet vehicles and drivers,
 creates activities for upcoming deadlines and sends new notices to vyto.
@@ -33,7 +33,7 @@ Odoo Online cannot install third-party modules; use Odoo.sh or an on-premise ins
 - Settings (API key): administrators
 
 ## Branches
-One branch per Odoo version: `17.0`, `18.0`, `19.0`.
+One branch per Odoo version: `17.0`, `18.0`, `19.0`, `20.0`.
 
 ## License
 LGPL-3, see `LICENSE`.

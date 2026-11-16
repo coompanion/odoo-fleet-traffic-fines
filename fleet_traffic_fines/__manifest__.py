@@ -1,7 +1,7 @@
 # Part of Fleet Traffic Fines. See LICENSE file for full copyright and licensing details.
 {
     "name": "Fleet Traffic Fines",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "summary": "See traffic fines per vehicle and driver, with deadlines, and send notices to vyto",
     "description": """
 Traffic fines for your fleet, right where your vehicles are.
@@ -16,8 +16,7 @@ Requires a vyto account (external service).
     "license": "LGPL-3",
     "depends": ["fleet", "mail"],
     "data": [
-        "security/fleet_traffic_fines_security.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/ir_cron.xml",
         "wizard/fleet_traffic_fine_upload_views.xml",
         "views/fleet_traffic_fine_views.xml",

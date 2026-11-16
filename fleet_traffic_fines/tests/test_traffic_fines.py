@@ -40,9 +40,9 @@ class TestTrafficFines(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env["ir.config_parameter"].sudo().set_param(PARAM_API_KEY, "vyto_" + "A" * 43)
+        cls.env["ir.config_parameter"].sudo().set_str(PARAM_API_KEY, "vyto_" + "A" * 43)
         # Independent of an earlier real sync in the same database
-        cls.env["ir.config_parameter"].sudo().set_param(PARAM_LAST_SYNC, "")
+        cls.env["ir.config_parameter"].sudo().set_str(PARAM_LAST_SYNC, "")
         cls.manager_user = cls.env["res.users"].create({
             "name": "Fleet Manager",
             "login": "fleet_manager_tf",
@@ -79,7 +79,7 @@ class TestTrafficFines(TransactionCase):
     def test_sync_is_incremental_and_updates(self):
         cid = "11111111-0000-0000-0000-000000000002"
         self._sync([{"data": [vyto_case(cid)], "has_more": False}])
-        self.assertEqual(self.env["ir.config_parameter"].sudo().get_param(PARAM_LAST_SYNC), "2026-11-10T10:00:00+00:00")
+        self.assertEqual(self.env["ir.config_parameter"].sudo().get_str(PARAM_LAST_SYNC), "2026-11-10T10:00:00+00:00")
         _received, mocked = self._sync([{"data": [vyto_case(cid, status="Abgeschlossen", updated="2026-11-12T08:00:00+00:00")], "has_more": False}])
         self.assertEqual(mocked.call_args.kwargs.get("updated_since"), "2026-11-10T10:00:00+00:00")
         fines = self.Fine.search([("vyto_id", "=", cid)])
@@ -142,7 +142,7 @@ class TestTrafficFines(TransactionCase):
     def test_upload_sends_pdf_with_plate_and_stable_reference(self):
         pdf = b"%PDF-1.4 test"
         wizard = self.env["fleet.traffic.fine.upload"].with_user(self.manager_user).create({
-            "vehicle_id": self.vehicle.id, "file": base64.b64encode(pdf), "filename": "notice.pdf"})
+            "vehicle_id": self.vehicle.id, "file": base64.b64encode(pdf).decode(), "filename": "notice.pdf"})
         with patch(f"{API}.upload_document", return_value={"id": "u1", "status": "received"}) as mocked:
             wizard.action_upload()
             wizard.action_upload()
@@ -152,12 +152,12 @@ class TestTrafficFines(TransactionCase):
         self.assertEqual(first.kwargs["external_ref"], second.kwargs["external_ref"], "same file, same reference")
 
     def test_upload_rejects_non_pdf(self):
-        wizard = self.env["fleet.traffic.fine.upload"].create({"file": base64.b64encode(b"<html>"), "filename": "x.html"})
+        wizard = self.env["fleet.traffic.fine.upload"].create({"file": base64.b64encode(b"<html>").decode(), "filename": "x.html"})
         with self.assertRaises(UserError):
             wizard.action_upload()
 
     def test_missing_key_is_a_clear_error(self):
-        self.env["ir.config_parameter"].sudo().set_param(PARAM_API_KEY, "")
+        self.env["ir.config_parameter"].sudo().set_str(PARAM_API_KEY, "")
         with self.assertRaises(UserError):
             self.Fine._sync_from_vyto()
         # The cron must not crash

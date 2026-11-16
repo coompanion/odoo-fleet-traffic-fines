@@ -33,8 +33,8 @@ class VytoApi:
     def __init__(self, env):
         self.env = env
         icp = env["ir.config_parameter"].sudo()
-        self.api_key = (icp.get_param(PARAM_API_KEY) or "").strip()
-        self.base_url = (icp.get_param(PARAM_API_URL) or DEFAULT_API_URL).strip().rstrip("/")
+        self.api_key = (icp.get_str(PARAM_API_KEY) or "").strip()
+        self.base_url = (icp.get_str(PARAM_API_URL) or DEFAULT_API_URL).strip().rstrip("/")
         if not self.api_key:
             raise VytoApiError(self.env._("No vyto API key configured. Add it in Fleet > Configuration > Settings."))
         if not self.base_url.startswith("https://"):

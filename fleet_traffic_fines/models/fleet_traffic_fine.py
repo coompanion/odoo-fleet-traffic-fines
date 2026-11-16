@@ -117,7 +117,7 @@ class FleetTrafficFine(models.Model):
         """Fetch cases changed since the last sync and mirror them. Returns the number of cases received."""
         api_client = VytoApi(self.env)
         icp = self.env["ir.config_parameter"].sudo()
-        since = icp.get_param(PARAM_LAST_SYNC) or None
+        since = icp.get_str(PARAM_LAST_SYNC) or None
         latest = since
         cursor = None
         received = 0
@@ -135,7 +135,7 @@ class FleetTrafficFine(models.Model):
         # Vehicles created after a fine arrived: try to match again
         self.sudo().search([("vehicle_id", "=", False), ("license_plate_normalized", "!=", False)])._match_vehicle(vehicles)
         if latest:
-            icp.set_param(PARAM_LAST_SYNC, latest)
+            icp.set_str(PARAM_LAST_SYNC, latest)
         self._schedule_deadline_activities()
         return received
 
