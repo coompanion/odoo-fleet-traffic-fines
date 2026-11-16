@@ -33,7 +33,7 @@ Odoo Online cannot install third-party modules; use Odoo.sh or an on-premise ins
 - Settings (API key): administrators
 
 ## Branches
-One branch per Odoo version: `17.0`, `18.0`, `19.0`.
+One branch per Odoo version: `17.0`, `18.0`, `19.0`, `20.0`.
 
 ## License
 LGPL-3, see `LICENSE`.
